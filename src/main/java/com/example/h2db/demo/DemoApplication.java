@@ -23,20 +23,24 @@ public class DemoApplication implements CommandLineRunner {
 		Student s1=new Student();
 
 		s1.setName("Varma");
-		s1.setPassportNumber("8096210403");
+		s1.setPhoneNumber("8096210403");
 
 		studentRepository.save(s1);
 
-		studentRepository.findAll().stream().forEach(student -> System.out.println(student));
+		//studentRepository.findAll().stream().forEach(student -> System.out.println(student));
 
 		Student s3=new Student();
 
 		s3.setName("Chaluvadi");
-		s3.setPassportNumber("7780208242");
+		s3.setPhoneNumber("7780208242");
 
 		studentRepository.save(s3);
 
+		Thread.sleep(1000);
 
+		Student s=studentRepository.findByName("Chaluvadi");
+		s.setPhoneNumber("8096210403");
+		studentRepository.save(s);
 
 	}
 }
