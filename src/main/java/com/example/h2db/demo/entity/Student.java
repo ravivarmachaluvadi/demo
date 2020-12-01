@@ -28,5 +28,7 @@ public class Student {
     private Date creationDate;
     @UpdateTimestamp
     private Date modifiedDate;
+    private int age;
+    private double percentage;
 
 }
