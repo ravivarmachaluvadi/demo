@@ -3,10 +3,17 @@ package com.example.h2db.demo;
 import com.example.h2db.demo.entity.Student;
 import com.example.h2db.demo.repository.StudentRepository;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
+@RunWith(SpringRunner.class)
+@Configuration
+@ActiveProfiles("test")
 class DemoApplicationTests {
 	@Autowired
 	StudentRepository studentRepository;
