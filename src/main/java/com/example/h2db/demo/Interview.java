@@ -121,6 +121,13 @@ public class Interview {
                 System.out.println(e.getName());
             }
         }
+
+        DoubleSummaryStatistics employeeSalaryStatistics=
+                empList.stream().collect(Collectors.summarizingDouble(Emp::getSalary));
+
+        System.out.println("Average Salary = "+employeeSalaryStatistics.getAverage());
+
+        System.out.println("Total Salary = "+employeeSalaryStatistics.getSum());
     }
 }
 
