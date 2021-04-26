@@ -17,14 +17,10 @@ public class BigBossRealityShow {
     public static void main(String args[]) {
 
 //char [] chArray= {'a','a','a','a','a','b','b','c','c','c','d','d','d','d'};
-
 // char [] chArray= {'a','a','b','b'};
-
 //char [] chArray= {'a','a','b','b','c'};
-
 //char [] chArray= {'a','a','b','b','c','d'};
-
-        char []  chArray=null;
+char []  chArray=null;
 
         Map<Character,Integer> map = new HashMap();
 
